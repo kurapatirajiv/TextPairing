@@ -1,0 +1,5 @@
+KansasCity:MO
+Newark:NJ
+San Francisco:CA
+Newark:NJ
+San Francisco:CA
