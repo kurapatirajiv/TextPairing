@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by Rajiv on 3/21/17.
  */
-public class PairReducer extends Reducer<TextPair,IntWritable,Text,IntWritable> {
+public class PairReducer extends Reducer<TextPair,IntWritable,TextPair,IntWritable> {
 
 
     public void reduce(TextPair key,Iterable<IntWritable> values, Context context) throws IOException,InterruptedException{
@@ -18,7 +18,7 @@ public class PairReducer extends Reducer<TextPair,IntWritable,Text,IntWritable> 
         for(IntWritable val: values){
             count +=val.get();
         }
-        context.write(new Text(key.toString()+","),new IntWritable(count));
+        context.write(key,new IntWritable(count));
     }
 
 }

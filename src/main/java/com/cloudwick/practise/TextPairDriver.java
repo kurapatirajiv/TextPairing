@@ -31,6 +31,8 @@ public class TextPairDriver {
         job.setJobName("TextPair Count Application");
 
         job.setMapperClass(PairMapper.class);
+        // Adding a combiner
+        job.setCombinerClass(PairReducer.class);
         job.setReducerClass(PairReducer.class);
 
         // Define Mapper output classes
