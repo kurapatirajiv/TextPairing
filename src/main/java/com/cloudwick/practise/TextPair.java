@@ -56,7 +56,7 @@ public class TextPair implements WritableComparable<TextPair> {
         return "TextPair{" +
                 "state=" + state +
                 ", city=" + city +
-                '}';
+                "} ,";
     }
 
 
